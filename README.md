@@ -1,5 +1,5 @@
 # stnreg2gml
-Konvertera StnReg till Inspire GML
+Konvertera Stationsregistret till Inspire GML
 
 ## Om
 
