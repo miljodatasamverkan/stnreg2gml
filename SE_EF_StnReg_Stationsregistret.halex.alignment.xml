@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Ca8d8d118-4a38-441f-90c6-ad1faa1bfec5" priority="normal">
+        <source>
+            <class>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C56f055a1-2ef1-4f2c-aa70-3f4a1540f2cb" priority="normal">
+        <source name="var">
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="begin_lifespan" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="additionalDescription" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+            </property>
+        </target>
+        <parameter value="Begin lifespan: {begin_lifespan}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C4417ccc2-ec34-47f7-bc73-3d3c54c0ab35" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="belongsTo" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.geometric.extent" id="Ca1797d21-ddc4-460d-89be-9277fe0096e9" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="position" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="convexhull" name="type"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Caf32ea58-2400-468f-9d53-20dbfd6dbee3" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="broader" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0da55c9f-d40b-4609-ab4a-7c7b36743270" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cecb4c4f4-aa26-4f86-ad4c-0112bbf9df23" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="descriptionReference" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9959b2d1-1d05-4189-afea-01d68fd771d1" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="position" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="Point" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="geometry" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="choice" ns="http://www.opengis.net/gml/3.2/AbstractGeometry"/>
+                <child name="Point" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C54919e89-ffae-41c9-9dd6-7206664dc089" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="hasObservation" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca4d35848-f8ce-4b7b-afd4-02995814cc31" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3cddc01c-7289-4dfb-b02f-b35189303fa3" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="uuid" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="identifier" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C47860b4d-c229-4385-abea-f1569138c9db" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="identifier" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="codeSpace"/>
+            </property>
+        </target>
+        <parameter value="https://stationsregister.miljodatasamverkan.se/so/ef/environmentalmonitoringfacility" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce4c2c1eb-c644-4de0-856c-62d0c4035cc7" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="localid" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="localId" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cfe42b2bd-33c8-4111-8566-59e826d6522b" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="inspireId" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="Identifier" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+                <child name="namespace" ns="http://inspire.ec.europa.eu/schemas/base/3.3"/>
+            </property>
+        </target>
+        <parameter value="https://stationsregister.miljodatasamverkan.se/so/ef/environmentalmonitoringfacility" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C020d52ee-ad31-49c2-964a-a0c4626ff8e7" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="involvedIn" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C51c42c75-f7e2-4ee4-93d9-fb133dded822" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="legalBackground" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cd65286d7-be87-43ea-83a3-6211a31a21a3" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="measurementRegime" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C8552ad35-80b0-4b6d-ace1-89bbe0e1c1fd" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="mediaMonitored" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://www.miljodatasamverkan.se/datadict/vocabulary/Inspire/Media/Ovrigt" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc951bd21-d19a-45e9-aaf0-2b1e2d66e6be" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="media_types" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="mediaMonitored" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="title" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc16a1656-263d-45bf-b2e7-3cead0f12bc1" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="metaDataProperty" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc6b24c1f-950a-4d40-86dc-f76614e3f505" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="localid" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="name" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cefacbc3d-9aaa-4972-a6ef-8b96eed4ca72" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="localid" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cc862ae94-8fe6-4ab7-8cd6-391dfb995909" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="name" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="codeSpace"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cab68b3f0-3624-410f-b898-e66536c4a2ba" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="narrower" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc68944d8-f579-4d8b-b467-dd1611d6e325" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="observingCapability" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ce840ec76-6af9-4511-b227-0a1efc7390c3" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="onlineResource" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+            </property>
+        </target>
+        <parameter value="https://stationsregister.miljodatasamverkan.se/stationsregister/composer/" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C7c25613a-e586-4309-8670-5a61004f509f" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="operationalActivityPeriod" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C4f8ade0f-fb16-431f-ada4-c249df92b271" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="purpose" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C0b45c2c6-197c-48dd-a763-c5353f19b964" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="relatedTo" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb60e92bd-01a8-4f4f-b39a-54bedb241dc4" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="reportedTo" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="ReportToLegalAct" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="legalAct" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cc85d55e8-7a14-4c7e-92ad-df14c40dd5a7" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="representativePoint" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3d6a6d65-440f-463b-b1d7-04822de970ff" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="datahost_organization_email" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="responsibleParty" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="contact" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="Contact" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="electronicMailAddress" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C99a3d19a-abd9-4e8c-89f3-b2d64417bbb7" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="datahost_name" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="responsibleParty" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="individualName" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8b139088-49dc-450d-8dd5-9e79f32d15bf" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="datahost_organization_name" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="responsibleParty" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="RelatedParty" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="organisationName" ns="http://inspire.ec.europa.eu/schemas/base2/2.0"/>
+                <child name="choice" ns="http://www.isotc211.org/2005/gco/CharacterString"/>
+                <child name="CharacterString" ns="http://www.isotc211.org/2005/gco"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C713542dc-ee35-4082-a4a7-a038f5734065" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="resultAcquisitionSource" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C3f9847d9-496b-4d08-85dd-b59d533d7a5c" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="specialisedEMFType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C2e025f62-0fc6-4968-947c-73f4ddc4bdd2" priority="normal">
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="supersededBy" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <parameter value="http://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0a6d9240-dbab-42f0-900e-96c7b6b7ba72" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="older_id" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="supersedes" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+</alignment>
