@@ -39,4 +39,4 @@ Python moduler som behövs: sys, os, datetime
 
 
 ## Begränsningar
-Skriptet skapar i nuläget inte GML för Nitrat_matstationer_JV. Dessa behöver i nuläget expoteras manuellt.
+Skriptet skapar i nuläge inte GML för Nitrat_matstationer_JV. Dessa behöver än så länge exporteras manuellt.
