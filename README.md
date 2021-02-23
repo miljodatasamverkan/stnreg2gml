@@ -35,7 +35,7 @@ Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sätt
 
 Skriptet är skrivet och testat i Python-3.8.7, men det ska fungera väl i alla moderna Python >3.
 
-För att köra krävs det [HALE Studio](https://github.com/halestudio/hale) och Python moduler `sys`, `os` och `datetime
+För att köra krävs det [HALE Studio](https://github.com/halestudio/hale) och Python modulerna `sys`, `os` och `datetime`
 
 
 ## Begränsningar
