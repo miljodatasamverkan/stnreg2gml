@@ -33,7 +33,7 @@ Alla filer behöver inte finnas i samma mapp, men det rekommenderas. Om filerna 
 
 Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sättas i variabeln "HALEexecutable" i början.
 
-Skriptet är skrivet och testat i Python-3.8.5, men det ska fungera väl i alla moderna Python >3.
+Skriptet är skrivet och testat i Python-3.8.7, men det ska fungera väl i alla moderna Python >3.
 
 Python moduler som behövs: sys, os, datetime
 
