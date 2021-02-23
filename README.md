@@ -20,13 +20,13 @@ eller, om man gör filen körbar:
 
 ## Filer
 
-stnreg2gml.py: själva skriptet
+`stnreg2gml.py` : själva skriptet
 
-SE_EF_StnReg_Stationsregistret.halex: HALE projekt
+`SE_EF_StnReg_Stationsregistret.halex`: HALE projekt
 
-SE_EF_StnReg_Stationsregistret.halex.alignment.xml: mappningen
+`SE_EF_StnReg_Stationsregistret.halex.alignment.xml`: mappningen
 
-SE_EF_StnReg_Stationsregistret.halex.styles.sld: (tom) SLD fil, en del av HALE projektet
+`SE_EF_StnReg_Stationsregistret.halex.styles.sld`: (tom) SLD fil, en del av HALE projektet
 
 
 Alla filer behöver inte finnas i samma mapp, men det rekommenderas. Om filerna inte ska finnas i samma mapp ska sökvägen anges i skriptet.
