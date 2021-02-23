@@ -10,11 +10,11 @@ Uttag görs ur databasen genom WFS tjänsten, tabellen "active_site". Skriptet a
 
 ## Användning
 
-python3 stnreg2gml.py
+`python3 stnreg2gml.py`
 
 eller, om man gör filen körbar:
 
-stnreg2gml.py 
+`stnreg2gml.py`
 
 
 
