@@ -5,7 +5,7 @@ Konvertera StnReg till Inspire GML
 
 Skriptet skapar Inspire GML filer för varje datavärdskap och för hela Stationsregistret. 
 
-Uttag görs ur databasen genom WFS tjänsten, tabellen "active_site". Skriptet anropar sedan HALE Studio och passar argument för att harmonisera olika datavärdskap och hela Stationsregistret. 
+Uttag görs ur databasen genom WFS tjänsten, tabellen "active_site". Skriptet anropar sedan [HALE Studio](https://github.com/halestudio/hale) och passar argument för att harmonisera olika datavärdskap och hela Stationsregistret. 
 
 
 ## Användning
@@ -35,7 +35,7 @@ Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sätt
 
 Skriptet är skrivet och testat i Python-3.8.7, men det ska fungera väl i alla moderna Python >3.
 
-Python moduler som behövs: sys, os, datetime
+För att köra krävs det [HALE Studio](https://github.com/halestudio/hale) och Python moduler `sys`, `os` och `datetime
 
 
 ## Begränsningar
