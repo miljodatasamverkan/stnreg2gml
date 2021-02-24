@@ -33,9 +33,13 @@ Alla filer behöver inte finnas i samma mapp, men det rekommenderas. Om filerna 
 
 Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sättas i variabeln "HALEexecutable" i början.
 
+
+
+## Förutsättningar
+
 Skriptet är skrivet och testat i Python-3.8.7, men det ska fungera väl i alla moderna Python >3.
 
-För att köra krävs det [HALE Studio](https://github.com/halestudio/hale) och Python modulerna `sys`, `os` och `datetime`
+[HALE Studio](https://github.com/halestudio/hale) och Python modulerna `sys`, `os` och `datetime` måste vara tillgängliga.
 
 
 ## Begränsningar
