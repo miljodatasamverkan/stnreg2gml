@@ -1,0 +1,9 @@
+version: "3"
+services:
+  stnreg-hale:
+    container_name: stnreg-hale
+    image: stnreg/hale:1.0
+    restart: "no"
+    build: .
+    volumes:
+      - "./output:/stnreg/output"

@@ -5,18 +5,22 @@ Konvertera Stationsregistret till Inspire GML
 
 Skriptet skapar Inspire GML filer för varje datavärdskap och för hela Stationsregistret. 
 
-Uttag görs ur databasen genom WFS tjänsten, tabellen "active_site". Skriptet anropar sedan [HALE Studio](https://github.com/halestudio/hale) och passar argument för att harmonisera olika datavärdskap och hela Stationsregistret. 
+Uttag görs ur databasen genom WFS tjänsten, tabellen "active_site". Skriptet anropar sedan [hale-cli](https://github.com/halestudio/hale-cli) och passar argument för att harmonisera olika datavärdskap och hela Stationsregistret. 
 
 
 ## Användning
 
-`python3 stnreg2gml.py`
+Kör script:
+`docker-compose up` - Filerna hittas i `output`
 
-eller, om man gör filen körbar:
+Kör script efter du modifierat någon fil:
+`docker-compose up --build`
 
-`stnreg2gml.py`
-
-
+Hale exporterar från `https://stationsregister.miljodatasamverkan.se` men kan modifieras genom att skicka med miljövariabel `WFS_URL` i `docker-compose.yml`. Ex
+```
+environment:
+  - WFS_URL=https://stationsregistertest.miljodatasamverkan.se/geoserver/stationsregistret/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=stationsregistret:active_site
+```
 
 ## Filer
 
@@ -28,19 +32,6 @@ eller, om man gör filen körbar:
 
 `SE_EF_StnReg_Stationsregistret.halex.styles.sld`: (tom) SLD fil, en del av HALE projektet
 
-
-Alla filer behöver inte finnas i samma mapp, men det rekommenderas. Om filerna inte ska finnas i samma mapp ska sökvägen anges i skriptet.
-
-Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sättas i variabeln "HALEexecutable" i början.
-
-
-
-## Förutsättningar
-
-Skriptet är skrivet och testat i Python-3.8.7, men det ska fungera väl i alla moderna Python >3.
-
-[HALE Studio](https://github.com/halestudio/hale) och Python modulerna `sys`, `os` och `datetime` måste vara tillgängliga.
-
-
 ## Begränsningar
+
 Skriptet skapar i nuläge inte GML för Nitrat_matstationer_JV. Dessa behöver än så länge exporteras manuellt.

@@ -48,12 +48,6 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">64f4283e-6f88-44fa-a15e-985e5ee6e417</setting>
-        <setting name="source">https://kodlistor.miljodatasamverkan.se/datadict/vocabulary/Inspire/Media/codelist</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
-        <setting name="charset">UTF-8</setting>
         <setting name="resourceId">bd3f579a-0c35-4cba-a0e9-cfc0c6f4298b</setting>
         <setting name="source">http://inspire.ec.europa.eu/codelist/VoidReasonValue</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
@@ -103,7 +97,7 @@
                     <property name="href" namespace="http://www.w3.org/1999/xlink"/>
                 </entity>
             </codeList>
-            <codeList identifier="//www.miljodatasamverkan.se/datadict/vocabulary/Inspire/Media" namespace="http://www.miljodatasamverkan.se/datadict/vocabulary/Inspire/Media">
+            <codeList identifier="//kodlistor.miljodatasamverkan.se/def/vocabulary/Inspire/Media" namespace="https://kodlistor.miljodatasamverkan.se/def/vocabulary/Inspire/Media">
                 <entity>
                     <type name="EnvironmentalMonitoringFacilityType" namespace="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
                     <property name="mediaMonitored" namespace="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
