@@ -49,7 +49,7 @@
     <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="resourceId">64f4283e-6f88-44fa-a15e-985e5ee6e417</setting>
-        <setting name="source">https://kodlistor.miljodatasamverkan.se/datadict/vocabulary/Inspire/Media/codelist</setting>
+        <setting name="source">https://kodlistor.miljodatasamverkan.se/def/vocabulary/Inspire/Media/codelist</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.codelist.inspire</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.codelist.read" provider-id="eu.esdihumboldt.hale.io.codelist.inspire.reader">
