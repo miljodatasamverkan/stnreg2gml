@@ -25,12 +25,12 @@ def main(argv):
     # grundparametrarna, anpassa vid behov
     
     # HALE körbar fil
-    HALEexecutable = "/usr/local/hale-studio-4.0.0-linux.gtk.x86_64/HALE"
+    HALEexecutable = "/usr/local/hale-studio-4.1.0-linux.gtk.x86_64/HALE"
 
     # HALE Inspire mappning
     HALEprojekt = "SE_EF_StnReg_Stationsregistret.halex"
     
-    # StnReg WFS anrop, inlusive tabell
+    # StnReg WFS anrop, inklusive tabell
     StnRegWFS = "https://stationsregister.miljodatasamverkan.se/geoserver/stationsregistret/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=stationsregistret:active_site"
     
 
