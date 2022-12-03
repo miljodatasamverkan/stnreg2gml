@@ -9,10 +9,10 @@
 # Usage:
 # python3 stnreg2gml.py
 #
-# version 0.2
-# 2021-02-23
+# version 0.3
+# 2022-11-30
 # 
-# Hernán De Angelis, HaV / GeoNatura AB
+# Hernán De Angelis, GeoNatura AB / HaV
 
 import sys
 import os
@@ -25,13 +25,13 @@ def main(argv):
     # grundparametrarna, anpassa vid behov
     
     # HALE körbar fil
-    HALEexecutable = "/usr/local/hale-studio-4.1.0-linux.gtk.x86_64/HALE"
+    HALEexecutable = "/usr/local/hale-studio-5.0.0.SNAPSHOT-linux.gtk.x86_64/HALE"
 
     # HALE Inspire mappning
     HALEprojekt = "SE_EF_StnReg_Stationsregistret.halex"
     
-    # StnReg WFS anrop, inklusive tabell
-    StnRegWFS = "https://stationsregister.miljodatasamverkan.se/geoserver/stationsregistret/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=stationsregistret:active_site"
+    # StnReg WFS anrop, inlusive tabell
+    StnRegWFS = "https://stationsregister.miljodatasamverkan.se/geoserver/stationsregistret/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&TYPENAME=stationsregistret:active_site"
     
 
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -50,7 +50,7 @@ def main(argv):
 	'6' : 'Platser för miljöövervakning: Datavärdskap Miljögifter',
 # 	'0' : 'Nitrat mätstationer',
 # 	'8' : 'Platser för miljöövervakning: Datavärdskap Jordbruksmark',
-# 	'0' : 'Platser för miljöövervakning: Datavärdskap Hälsorelaterad miljöövervakning',
+# 	'9' : 'Platser för miljöövervakning: Datavärdskap Hälsorelaterad miljöövervakning',
     }
 
     # dessa ändras enbart i fall av ändringar i filbenämningskonventionen
@@ -59,16 +59,17 @@ def main(argv):
 	'7' : 'SE_EF_StnReg_DV_Luftkvalitet',
 	'12' : 'SE_EF_StnReg_DV_Naturdata_faglar_fjarilar',
 	'10' : 'SE_EF_StnReg_DV_Badvatten',
-	'11' : 'Stralningsmatningar_SSM',
+    '11' : 'SE_EF_Stnreg_Stralningsmatningar',
 	'1' : 'SE_EF_StnReg_DV_Sjoar_vattendrag',
 	'4' : 'SE_EF_StnReg_DV_Oceanografi_marinbiologi',
 	'2' : 'SE_EF_StnReg_DV_Provfiske',
 	'6' : 'SE_EF_StnReg_DV_Miljogifter',
 # 	'0' : 'Nitrat_matstationer_JV',
 # 	'8' : 'SE_EF_StnReg_DV_Jordbruksmark',
-# 	'0' : 'SE_EF_StnReg_DV_Halsorelaterad_miljoovervakning',
+# 	'9' : 'SE_EF_StnReg_DV_Halsorelaterad_miljoovervakning',
     }
 
+	#'11' : 'Stralningsmatningar_SSM',
 
     # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
     # skappa logfil
@@ -105,21 +106,23 @@ def main(argv):
         #print(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -reportsOut "report.log" """)
         
         # kör HALE transformering
-        os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -reportsOut "report.log" """)
+        os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -trustGroovy -reportsOut "report.log" """)
         writeLog(f"""{datavarsdsKoder[datavarsdsKod]}: klart\n""")
+        
+        # komprimera filerna
+        os.system(f"""zip {gmlFilNamn[datavarsdsKod]}.gml.zip {gmlFilNamn[datavarsdsKod]}.gml""")
             
 
 
-    ## harmonisera hela StnReg
-    #writeLog(f"""Hela StnReg: startar""")
-
-    ## skriv ut kommando till stdout vid behov
-    ##print(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -providerId eu.esdihumboldt.hale.io.gml.reader -target "SE_EF_StnReg.gml" -preset InspireGML -reportsOut "report.log" """)
+    # harmonisera hela StnReg
+    writeLog(f"""Hela StnReg: startar""")
     
-    ## kör HALE transformering
-    #os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -providerId eu.esdihumboldt.hale.io.gml.reader -target "SE_EF_StnReg.gml" -preset InspireGML -reportsOut "report.log" """)
-    #writeLog(f"""Hela StnReg: klart\n""")
+    # kör HALE transformering
+    os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -providerId eu.esdihumboldt.hale.io.gml.reader -target "SE_EF_StnReg.gml" -preset InspireGML -trustGroovy -reportsOut "report.log" """)
+    writeLog(f"""Hela StnReg: klart\n""")
     
+    # komprimera filerna
+    os.system(f"""zip SE_EF_StnReg.gml.zip SE_EF_StnReg.gml""")    
 
 
 # sluta
