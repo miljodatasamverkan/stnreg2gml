@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<hale-project version="4.1.0.release">
+<hale-project version="5.1.0.SNAPSHOT">
     <name>SE_EF_StnReg_Stationsregistret</name>
     <author>hernan</author>
     <created>2022-06-21T12:46:04.928+02:00</created>
-    <modified>2022-06-21T15:05:56.393+02:00</modified>
+    <modified>2023-11-14T10:53:14.158+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/home/hernan/GeoNatura/proy/StnReg/20220621/SE_EF_StnReg_Stationsregistret.halex</setting>
+        <setting name="target">file:/home/hernan/GeoNatura/proy/StnReg/harmonisering/20231114/SE_EF_StnReg_Stationsregistret.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
@@ -104,6 +104,9 @@
     <property name="defaultGeometry:{http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility}active_siteType/1">{http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility}position</property>
     <property name="defaultGeometry:{http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility}active_siteType/2">{http://www.opengis.net/gml}Point</property>
     <property name="defaultGeometry:{http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility}active_siteType/count">2</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}AbstractFeatureType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}AbstractFeatureType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://www.opengis.net/gml/3.2}AbstractFeatureType/count">2</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml}AbstractContinuousCoverageType/1">{http://www.opengis.net/gml/domainSet}choice</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml}AbstractContinuousCoverageType/2">{http://www.opengis.net/gml}gridDomain</property>
     <property name="defaultGeometry:{http://www.opengis.net/gml}AbstractContinuousCoverageType/3">{http://www.opengis.net/gml}Grid</property>

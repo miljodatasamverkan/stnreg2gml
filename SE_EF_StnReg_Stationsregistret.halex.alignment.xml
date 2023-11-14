@@ -14,6 +14,37 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C35264c63-c655-46dc-9983-c663fd9f8b3d" priority="normal">
+        <source>
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="boundedBy" ns="http://www.opengis.net/gml"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="boundedBy" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="true" name="ignoreNamespaces"/>
+        <parameter value="true" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cddfd38a3-31eb-4112-9403-36d8e7479fbb" priority="normal">
+        <source name="var">
+            <property>
+                <type name="active_siteType" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+                <child name="comment" ns="http://miljodatasamverkan.se/so/ef/environmentalmonitoringfacility"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="EnvironmentalMonitoringFacilityType" ns="http://inspire.ec.europa.eu/schemas/ef/4.0"/>
+                <child name="description" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="Comment: {comment}" name="pattern"/>
+    </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C286b6f6e-85d3-43b4-9a42-4fc7c1fb036d" priority="normal">
         <source>
             <property>
