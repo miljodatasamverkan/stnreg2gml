@@ -10,7 +10,7 @@
 # python3 stnreg2gml.py
 #
 # version 0.4
-# 2023-11-14
+# 2024-05-21
 # 
 # Hernán De Angelis, GeoNatura AB / HaV
 
@@ -23,7 +23,7 @@ from datetime import datetime as DT
 # grundparametrarna, anpassa vid behov
 
 # HALE körbar fil
-HALEexecutable = "/usr/local/hale-studio-5.1.0.SNAPSHOT-linux.gtk.x86_64/HALE"
+HALEexecutable = "/usr/local/hale-studio-5.1.0-linux.gtk.x86_64/HALE"
 
 # HALE Inspire mappning
 HALEprojekt = "SE_EF_StnReg_Stationsregistret.halex"

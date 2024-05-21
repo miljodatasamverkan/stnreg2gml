@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<hale-project version="5.1.0.SNAPSHOT">
+<hale-project version="5.1.0.release">
     <name>SE_EF_StnReg_Stationsregistret</name>
     <author>hernan</author>
     <created>2022-06-21T12:46:04.928+02:00</created>
-    <modified>2023-11-14T10:53:14.158+01:00</modified>
+    <modified>2024-05-21T13:30:24.267+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/home/hernan/GeoNatura/proy/StnReg/harmonisering/20231114/SE_EF_StnReg_Stationsregistret.halex</setting>
+        <setting name="target">file:/home/hernan/GeoNatura/proy/StnReg/harmonisering/20240521/SE_EF_StnReg_Stationsregistret.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
