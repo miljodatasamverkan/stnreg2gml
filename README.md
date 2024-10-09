@@ -39,4 +39,4 @@ Skriptet behöver också veta sökvägen till HALE körbarfilen, detta ska sätt
 
 Skriptet är testat i Python-3.11.10, men det ska fungera väl i alla moderna Python med version > 3.8. Python modulerna `sys`, `os` och `datetime` ska vara tillgängliga.
 
-Harmoniseringen kördes och testades i [HALE Studio](https://github.com/halestudio/hale) v 5.3.0, menska fungera väl i alla hale med version > 5.0.0.
+Harmoniseringen kördes och testades i [HALE Studio](https://github.com/halestudio/hale) v 5.3.0, men ska fungera väl i alla hale med version > 5.0.0.
