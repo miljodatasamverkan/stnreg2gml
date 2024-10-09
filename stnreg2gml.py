@@ -23,7 +23,7 @@ from datetime import datetime as DT
 # grundparametrarna, anpassa vid behov
 
 # HALE körbar fil
-HALEexecutable = "/usr/local/hale-studio-5.1.0-linux.gtk.x86_64/HALE"
+HALEexecutable = "/usr/local/hale-studio-5.3.0-linux.gtk.x86_64/HALE"
 
 # HALE Inspire mappning
 HALEprojekt = "SE_EF_StnReg_Stationsregistret.halex"
@@ -100,8 +100,8 @@ def writeLog(loggMeddelande):
 for datavarsdsKod in datavarsdsKoder:
     writeLog(f"""{datavarsdsKoder[datavarsdsKod]}: startar""")
     
-    # skriv ut kommando till stdout vid behov
-    #print(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -reportsOut "report.log" """)
+    # # skriv ut kommando till stdout vid behov
+    # print(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -reportsOut "report.log" """)
     
     # kör HALE transformering
     os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -trustGroovy -reportsOut "report.log" """)
