@@ -9,8 +9,8 @@
 # Usage:
 # python3 stnreg2gml.py
 #
-# version 0.4
-# 2024-05-21
+# version 0.5
+# 2024-10-30
 # 
 # Hernán De Angelis, GeoNatura AB / HaV
 
@@ -46,7 +46,6 @@ datavarsdsKoder = {
 '4' : 'Platser för miljöövervakning: Datavärdskap Oceanografi och marinbiologi',
 '2' : 'Platser för miljöövervakning: Datavärdskap Provfiske',
 '6' : 'Platser för miljöövervakning: Datavärdskap Miljögifter',
-# 	'0' : 'Nitrat mätstationer',
 # 	'8' : 'Platser för miljöövervakning: Datavärdskap Jordbruksmark',
 # 	'9' : 'Platser för miljöövervakning: Datavärdskap Hälsorelaterad miljöövervakning',
 }
@@ -62,12 +61,9 @@ gmlFilNamn = {
 '4' : 'SE_EF_StnReg_DV_Oceanografi_marinbiologi',
 '2' : 'SE_EF_StnReg_DV_Provfiske',
 '6' : 'SE_EF_StnReg_DV_Miljogifter',
-# 	'0' : 'Nitrat_matstationer_JV',
 # 	'8' : 'SE_EF_StnReg_DV_Jordbruksmark',
 # 	'9' : 'SE_EF_StnReg_DV_Halsorelaterad_miljoovervakning',
 }
-
-#'11' : 'Stralningsmatningar_SSM',
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # skappa logfil
@@ -100,7 +96,7 @@ def writeLog(loggMeddelande):
 for datavarsdsKod in datavarsdsKoder:
     writeLog(f"""{datavarsdsKoder[datavarsdsKod]}: startar""")
     
-    # # skriv ut kommando till stdout vid behov
+    # # vid behov, skriv ut kommando till stdout för kontroll
     # print(f"""{HALEexecutable} -nosplash -application hale.transform -project "{HALEprojekt}" -source "{StnRegWFS}" -filter "CQL:datahost_id = '{datavarsdsKod}'" -providerId eu.esdihumboldt.hale.io.gml.reader -target "{gmlFilNamn[datavarsdsKod]}.gml" -preset InspireGML -reportsOut "report.log" """)
     
     # kör HALE transformering
@@ -108,9 +104,8 @@ for datavarsdsKod in datavarsdsKoder:
     writeLog(f"""{datavarsdsKoder[datavarsdsKod]}: klart\n""")
     
     # komprimera filerna
-    os.system(f"""zip {gmlFilNamn[datavarsdsKod]}.gml.zip {gmlFilNamn[datavarsdsKod]}.gml""")
+    os.system(f"""zip {gmlFilNamn[datavarsdsKod]}.zip {gmlFilNamn[datavarsdsKod]}.gml""")
         
-
 
 # harmonisera hela StnReg
 writeLog(f"""Hela StnReg: startar""")
@@ -120,5 +115,5 @@ os.system(f"""{HALEexecutable} -nosplash -application hale.transform -project "{
 writeLog(f"""Hela StnReg: klart\n""")
 
 # komprimera filerna
-os.system(f"""zip SE_EF_StnReg.gml.zip SE_EF_StnReg.gml""")    
+os.system(f"""zip SE_EF_StnReg.zip SE_EF_StnReg.gml""")    
 
