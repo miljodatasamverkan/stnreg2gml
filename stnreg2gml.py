@@ -56,7 +56,7 @@ gmlFilNamn = {
 '7' : 'SE_EF_StnReg_DV_Luftkvalitet',
 '12' : 'SE_EF_StnReg_DV_Naturdata_faglar_fjarilar',
 '10' : 'SE_EF_StnReg_DV_Badvatten',
-'11' : 'SE_EF_Stnreg_Stralningsmatningar',
+'11' : 'SE_EF_StnReg_Stralningsmatningar',
 '1' : 'SE_EF_StnReg_DV_Sjoar_vattendrag',
 '4' : 'SE_EF_StnReg_DV_Oceanografi_marinbiologi',
 '2' : 'SE_EF_StnReg_DV_Provfiske',
@@ -71,7 +71,7 @@ gmlFilNamn = {
 # få dagens datum
 idag = date.today()
 
-loggFilNamn = f"""Stnreg2gml_{idag}.log"""
+loggFilNamn = f"""StnReg2gml_{idag}.log"""
 file = open(loggFilNamn,"w")
 file.close()
 
